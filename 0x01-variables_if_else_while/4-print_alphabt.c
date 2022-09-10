@@ -11,7 +11,7 @@
  * Can only use putchar
  *
  * Return: 0 for success
- * */
+*/
 int main(void)
 {
 	char letter = 'a';
