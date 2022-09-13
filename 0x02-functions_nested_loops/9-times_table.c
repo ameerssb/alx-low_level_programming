@@ -1,29 +1,42 @@
-#include "holberton.h"
-
+#include "main.h"
 
 /**
- * jack_bauer - prints all minutes of the day
- * @void: first int to add
+ * times_table - prints times table up to 9
+ *
+ * Return: void
  *
 */
 
-void jack_bauer(void)
+void times_table(void)
 {
-	int hr;
-	int min;
+	int y, x, prod;
 
-	for (hr = 0; hr < 24; hr++)
+	prod = 0;
+
+	for (y = 0; y <= 9; y++)
 	{
-		for (min = 0; min < 60; min++)
+		for (x = 0; x <= 9; x++)
 		{
-			_putchar((hr / 10) + '0');
-			_putchar((hr % 10) + '0');
-			_putchar(':');
-			_putchar((min / 10) + '0');
-			_putchar((min % 10) + '0');
-			_putchar('\n');
+			prod = y * x;
+			if (x != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+			if (prod >= 10)
+			{
+				_putchar((prod / 10) + '0');
+				_putchar((prod % 10) + '0');
+			}
+			else if ((prod < 10) && (x != 0))
+			{
+				_putchar(' ');
+				_putchar((prod % 10) + '0');
+			}
+			else
+				_putchar((prod % 10) + '0');
 		}
-
+		_putchar('\n');
 	}
 }
 
