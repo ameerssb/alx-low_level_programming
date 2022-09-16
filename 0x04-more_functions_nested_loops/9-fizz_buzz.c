@@ -7,7 +7,7 @@
  * multiples of 5 with Buzz, and multiples of both with FizzBuzz
  *
  * Return: zero
- * */
+*/
 
 int main(void)
 {
