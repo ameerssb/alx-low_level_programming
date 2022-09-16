@@ -2,7 +2,9 @@
 
 /**
  * print_triangle - print a triangle
+
  * @size: demensions of triangle
+
  * Return: nothing
 */
 
